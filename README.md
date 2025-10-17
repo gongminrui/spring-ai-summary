@@ -163,6 +163,8 @@ http://localhost:8081/actuator/metrics/ai.total.tokens
   - [LLM 系列（十）：RAG 番外篇-向量检索](https://mp.weixin.qq.com/s/QFnfBU2we_4UG6v4spEFgA)
   - [LLM 系列（十一）：从 DeepSeek UE8M0 来回顾精度革命](https://mp.weixin.qq.com/s/E_AeSOGYzoynm5hVicaKfw)
   - [LLM 系列（十二）：解读 Function Calling](https://mp.weixin.qq.com/s/RiILquzDnKZCaZG8nry2Eg)
+  - [LLM 系列（十三）：解读 Context Engineering](https://mp.weixin.qq.com/s/o77X-ZKBbSwYq0qMqpTP4Q)
+  - [LLM 系列（十四）：解读 Deep Research](https://mp.weixin.qq.com/s/t_CAsHp5cnFQIKFbbQqkLg)
 
 #### 视频系列
 - [How to Build Agents with Spring AI](https://www.youtube.com/watch?v=d7m6nJxfi0g)
