@@ -4,10 +4,12 @@ import com.glmapper.ai.chat.deepseek.advisors.SimpleMetricAdvisor;
 import com.glmapper.ai.chat.deepseek.prompts.PromptTemplateService;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 
 /**
  * @Classname ChatController
@@ -53,5 +55,11 @@ public class ChatController {
     public String chatWithMetric(@RequestParam String userInput) {
         SimpleMetricAdvisor metricAdvisor = new SimpleMetricAdvisor();
         return this.deepSeekChatClient.prompt().advisors(metricAdvisor).user(userInput).call().content();
+    }
+
+    @GetMapping(value = "/streamChatWithMetric", produces = "text/html;charset=utf-8")
+    public Flux<String> streamChatWithMetric(@RequestParam String userInput) {
+        SimpleMetricAdvisor metricAdvisor = new SimpleMetricAdvisor();
+        return this.deepSeekChatClient.prompt().advisors(metricAdvisor).user(userInput).stream().content();
     }
 }
